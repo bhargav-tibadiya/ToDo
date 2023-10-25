@@ -3,27 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do</title>
+    <title>To Do App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="letterb.jpeg"/>
 </head>
 <body>
-        
-    <div class="container">
-        <div class="todo-app">
-            <h2>ToDo List <img src="images/icon.png" alt=""> </h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your Task">
-                <button>Add</button>
+    <div class="wrapper">
+        <div class="container">
+            <div class="heading">
+                <h1>To Do List</h1>
+                <img src="../images/icon.png" alt="">
             </div>
-            <ul id="list-container">
-                <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
-                
-            </ul>
+            <div class="add-task">
+                <input type="text" id="taskText" placeholder="Add Task Here">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <div class="task-list" id="task-list">
+
+                <div class="task">
+                    <div class="status">
+                        <div></div>
+                    </div>
+                    <p class="text">Sample Task 1</p>
+                    <div class="delete">
+                        <p>X</p>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <div class="status">
+                        <div></div>
+                    </div>
+                    <p class="text">New : Task Will be saved in browser </p>
+                    <div class="delete">
+                        <p>X</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
     <script src="script.js"></script>
+    
 </body>
 </html>

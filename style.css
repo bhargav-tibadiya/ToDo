@@ -1,112 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800&family=Spline+Sans:wght@300;400;500;600&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins',sans-serif;
+    font-family: 'League Spartan', sans-serif;
+}
+
+
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 10vh 0;
+    background: linear-gradient(135deg,#153677,#4e085f);
 }
 
 .container{
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg,#153677,#4e085f);
-    padding: 10px;
-
-}
-
-
-.todo-app{
-    width: 100%;
-    max-width: 440px;
-    background: #fff;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 10px;
-}
-
-.todo-app h2{
-    color: #002765;
-    display: flex;
-    align-items: center;    
-    margin-bottom: 20px;
-}
-
-.todo-app h2 img{
-    width: 30px;
-    margin-left: 10px;  
-}
-
-.row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #292929;
+    max-width: 650px;
+    width: 90vw;
+    background-color: #fff;
     border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
+    
+}
+.heading{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 12px;
+    margin: 12px;
 }
 
-input{
-    flex: 1;
+.heading img{
+    width: 32px;
+    height: 32px;
+}
+
+.add-task{
+    display: flex;
+    margin: 12px 25px;
+    padding: 10px 15px;
+    background: #2e2e2e;
+    border-radius: 25px;
+}
+
+.add-task input{
+    background: #2e2e2e;
+    width: 75%;
+    padding: 5px 0px;
+    font-size: 22px;
     border: none;
     outline: none;
-    background: transparent;
-    padding: 10px;
+    color: white;
 }
 
-input::placeholder{
-    color: #fff;
-    font-weight: bold;
-    /* font-size: 12px; */
+.add-task input::placeholder{
+color: white;
 }
 
-button{
+.add-task button{
+    width: 25%;
+    padding: 10px 15px;
+    font-size: 22px;
     border: none;
     outline: none;
-    padding: 16px 50px;
     background: #ff5945;
+    border-radius: 15px;
     color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 40px;
-}
-
-ul li{
-    position: relative;
-    list-style: none;
-    font-size: 18px;
-    padding: 12px 8px 12px 50px;
-    user-select: none;
     cursor: pointer;
 }
 
-ul li::before{
-    content: "";
-    position: absolute;
-    height: 28px;
+
+.task-list{
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #fff;
+    margin: 12px 25px;
+    padding: 10px 15px;
+    background: #2e2e2e;
+    border-radius: 25px;
+}
+
+.task{
+    /* border: 3px solid #153677;    */
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 5px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.status{
+    /* border: 1px solid yellow; */
     width: 28px;
+    height: 28px;
     border-radius: 50%;
-    background: url("images/unchecked.png");
+    background: url(images/unchecked.png);
+    cursor: pointer;
     background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
-
 }
 
-.checked{
+.checked .status{
+    background: url(images/checked.png);
+    background-size: cover;
+}
+
+.checked .text{
     text-decoration: line-through;
 }
 
-.checked::before{
-    content: "";
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background: url("images/checked.png");
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
+.text{
+    padding: 12px 10px;
+    flex: 2;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
 
+.delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ff5945;
+    cursor: pointer;
 }
